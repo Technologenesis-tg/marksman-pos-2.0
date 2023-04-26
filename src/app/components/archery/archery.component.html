@@ -1,0 +1,80 @@
+<app-header></app-header>
+<div class="container">
+  <div class="theme_heading text-center">
+    <h2>Archery</h2>
+  </div>
+  <div class="bg-colors searchs p-4">
+    <form>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="form-group">
+            <label for="name">Name</label
+            ><input
+              type="text"
+              id="name"
+              formcontrolname="name"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <label for="number">Number</label
+            ><input
+              type="text"
+              id="number"
+              formcontrolname="number"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <label for="package">Package</label
+            ><select id="package" formcontrolname="package" class="form-control">
+              <option value="Basic" selected="" ng-reflect-value="Basic">
+                Basic
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="discount">Discount %</label
+            ><input
+              type="number"
+              id="discount"
+              formcontrolname="discount"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-md-4">
+          <ul>
+            <li class="d-block">
+              <div>
+                <label for="">Number Of Shooters :</label>
+                <div class="d-flex align-items-center addons border-0 m-0">
+                  <button type="button">-</button
+                  ><input
+                    readonly=""
+                    type="number"
+                    formcontrolname="numberOfShooters"
+                    minlength="0"
+                  /><button type="button">+</button>
+                </div>
+              </div>
+            </li>
+            <li>Sub Total : <span> Rs 599</span></li>
+            <li>Discount : <span> Rs 0</span></li>
+            <li>Total : <span> Rs 599</span></li>
+          </ul>
+          <div class="btnzz d-flex justify-content-end">
+            <button
+              type="submit"
+              class="theme_btnn mt-3 d-flex justify-content-end text-end"
+            >
+              Confirm Booking
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+  
+<app-footer></app-footer>

@@ -1,0 +1,869 @@
+<app-header></app-header>
+<div class="container-fluid">
+  <div class="theme_heading text-center">
+    <h2>{{title}}</h2>
+  </div>
+  <div class="container mt-2">
+    <div class="row">
+      <div class="col-md-3 sidee">
+        <div class="sidebar">
+          <ul>
+            <li (click)="paintball()" [ngClass]="{'useractive' : title === 'paintball'}">
+              <img src="../../../assets/img/icons/paintball.png" alt="">
+              <span>
+                Paintball</span>
+            </li>
+            <li (click)="cricket()" [ngClass]="{'useractive' : title === 'indoor cricket'}">
+              <img src="../../../assets/img/icons/cricket-player-with-bat.png"
+                alt="">
+              <span>
+                Indoor
+                <h1>Cricket</h1></span>
+            </li>
+            <li (click)="gel()" [ngClass]="{'useractive' : title === 'gel blaster'}">
+             <img src="../../../assets/img/icons/paintball-gun.png" alt="">
+              <span>
+                Gel
+                <h1>Blaster</h1></span>
+            </li>
+            <li (click)="badminton()" [ngClass]="{'useractive' : title === 'badminton'}">
+             <img src="../../../assets/img/icons/badminton.png" alt="">
+              <span>
+                Badminton</span>
+            </li>
+            <li (click)="futsal()" [ngClass]="{'useractive' : title === 'futsal'}">
+             <img src="../../../assets/img/icons/futsal.png" alt="">
+              <span>
+                Futsal</span>
+            </li>
+            <li (click)="archery()" [ngClass]="{'useractive' : title === 'archery'}">
+             <img src="../../../assets/img/icons/archery.png" alt="">
+              <span>
+                Archery</span>
+            </li>
+            <li (click)="airsoft()" [ngClass]="{'useractive' : title === 'airsoft range'}">
+             <img src="../../../assets/img/icons/weapon.png" alt="">
+              <span>
+                Airsoft
+                <h1>Range</h1></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-9" *ngIf="paintballz">
+        <div class="cardzz">
+          <div class="row align-items-center mb-4">
+            <div class="col-md-12">
+              <input type="text" placeholder="Search..." />
+            </div>
+          </div>
+          <div class="table-over">
+            <table class="table py-3">
+              <thead>
+                <tr class="f-tr">
+                  <th scope="col">ID</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Game</th>
+                  <th scope="col">Number</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Time</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <div class="row align-items-center pagination-row">
+            <div class="col-md-3"><span>59</span> Bookings Found.</div>
+            <div class="col-md-7">
+              <ul class="pagination">
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+              </ul>
+            </div>
+            <div class="col-md-2">
+              Showing: <span>1</span> To
+              <span>15</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9" *ngIf="cricketz">
+        <div class="cardzz">
+          <div class="row align-items-center mb-4">
+            <div class="col-md-12">
+              <input type="text" placeholder="Search..." />
+            </div>
+          </div>
+          <div class="table-over">
+            <table class="table py-3">
+              <thead>
+                <tr class="f-tr">
+                  <th scope="col">ID</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Game</th>
+                  <th scope="col">Number</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Time</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <div class="row align-items-center pagination-row">
+            <div class="col-md-3"><span>59</span> Bookings Found.</div>
+            <div class="col-md-7">
+              <ul class="pagination">
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+              </ul>
+            </div>
+            <div class="col-md-2">
+              Showing: <span>1</span> To
+              <span>15</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9" *ngIf="gelz">
+        <div class="cardzz">
+          <div class="row align-items-center mb-4">
+            <div class="col-md-12">
+              <input type="text" placeholder="Search..." />
+            </div>
+          </div>
+          <div class="table-over">
+            <table class="table py-3">
+              <thead>
+                <tr class="f-tr">
+                  <th scope="col">ID</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Game</th>
+                  <th scope="col">Number</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Time</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <div class="row align-items-center pagination-row">
+            <div class="col-md-3"><span>59</span> Bookings Found.</div>
+            <div class="col-md-7">
+              <ul class="pagination">
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+              </ul>
+            </div>
+            <div class="col-md-2">
+              Showing: <span>1</span> To
+              <span>15</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9" *ngIf="archeryz">
+        <div class="cardzz">
+          <div class="row align-items-center mb-4">
+            <div class="col-md-12">
+              <input type="text" placeholder="Search..." />
+            </div>
+          </div>
+          <div class="table-over">
+            <table class="table py-3">
+              <thead>
+                <tr class="f-tr">
+                  <th scope="col">ID</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Game</th>
+                  <th scope="col">Number</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Time</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <div class="row align-items-center pagination-row">
+            <div class="col-md-3"><span>59</span> Bookings Found.</div>
+            <div class="col-md-7">
+              <ul class="pagination">
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+              </ul>
+            </div>
+            <div class="col-md-2">
+              Showing: <span>1</span> To
+              <span>15</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9" *ngIf="futsalz">
+        <div class="cardzz">
+          <div class="row align-items-center mb-4">
+            <div class="col-md-12">
+              <input type="text" placeholder="Search..." />
+            </div>
+          </div>
+          <div class="table-over">
+            <table class="table py-3">
+              <thead>
+                <tr class="f-tr">
+                  <th scope="col">ID</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Game</th>
+                  <th scope="col">Number</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Time</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <div class="row align-items-center pagination-row">
+            <div class="col-md-3"><span>59</span> Bookings Found.</div>
+            <div class="col-md-7">
+              <ul class="pagination">
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+              </ul>
+            </div>
+            <div class="col-md-2">
+              Showing: <span>1</span> To
+              <span>15</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9" *ngIf="badmintonz">
+        <div class="cardzz">
+          <div class="row align-items-center mb-4">
+            <div class="col-md-12">
+              <input type="text" placeholder="Search..." />
+            </div>
+          </div>
+          <div class="table-over">
+            <table class="table py-3">
+              <thead>
+                <tr class="f-tr">
+                  <th scope="col">ID</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Game</th>
+                  <th scope="col">Number</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Time</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+               
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <div class="row align-items-center pagination-row">
+            <div class="col-md-3"><span>59</span> Bookings Found.</div>
+            <div class="col-md-7">
+              <ul class="pagination">
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+              </ul>
+            </div>
+            <div class="col-md-2">
+              Showing: <span>1</span> To
+              <span>15</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9" *ngIf="airsoftz">
+        <div class="cardzz">
+          <div class="row align-items-center mb-4">
+            <div class="col-md-12">
+              <input type="text" placeholder="Search..." />
+            </div>
+          </div>
+          <div class="table-over">
+            <table class="table py-3">
+              <thead>
+                <tr class="f-tr">
+                  <th scope="col">ID</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Game</th>
+                  <th scope="col">Number</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Time</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">#1083</th>
+                  <td>Muhammad Buksh</td>
+                  <td>Paintball</td>
+                  <td>03332619166</td>
+                  <td>4000</td>
+                  <td>26-3-2023</td>
+                  <td>11:00 PM</td>
+
+                  <td>Booked</td>
+                  <td>
+                    <button class="icons-btn me-2">
+                      <i class="fa fa-eye"></i></button><button class="icons-btn
+                      me-2">
+                      <i class="fa fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <div class="row align-items-center pagination-row">
+            <div class="col-md-3"><span>59</span> Bookings Found.</div>
+            <div class="col-md-7">
+              <ul class="pagination">
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+              </ul>
+            </div>
+            <div class="col-md-2">
+              Showing: <span>1</span> To
+              <span>15</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <app-footer></app-footer>   -->

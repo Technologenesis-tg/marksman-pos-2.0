@@ -1,0 +1,184 @@
+<app-header></app-header>
+<div class="container">
+  <div class="theme_heading text-center">
+    <h2>Gel Blaster</h2>
+  </div>
+  <div class="borderdd-box">
+    <div class="row">
+      <div class="col-lg-7 col-md-12">
+        <h2>Rules and Regulations</h2>
+        <ul class="gel">
+          <li>
+            Safety equipments MUST not be taken off during the game.
+          </li>
+          <li>
+            All players MUST submit the equipment back before leaving the battle
+            field.
+          </li>
+          <li>
+            All Players MUST use the equipment carefully, any misuse or damage to
+            the equipment will be player's responsibility.
+            <br /><b style="color: red;"
+              >PLEASE NOTE THAT YOU WILL BE CHARGED FOR ANY DAMAGES TO THE
+              EQUIPMENT</b
+            >
+          </li>
+          <li>
+            The Facilitation staff is there for your assistance, please cooperate
+            with them.
+          </li>
+          <li>
+            Failure to compliance will result in disqualification from the game or
+            upto the extent of removal of the player from the premises.
+          </li>
+          <li>
+            Maximum 10 players per round. Teams will be divided equally.
+          </li>
+        </ul>
+        <h2>Charges</h2>
+        <ul>
+          <li style="font-size: 16px;">
+            <b>Rs 199</b> Per Head (<b>Approx. 1000</b>
+            Shots) (Round time: 2 Minutes 30 Seconds)
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-5 col-md-12">
+        <h3>Booking Details</h3>
+        <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+          <table class="table tabless text-light">
+              <thead></thead>
+              <tbody class="tbodyy">
+                <tr>
+                  <th scope="row">Name:</th>
+                  <td>
+                    <input
+                      type="text"
+                      placeholder="Enter Name"
+                      name="name"
+                      formControlName="name"
+                      required=""
+                      autocomplete="off"
+                      class="input_n"
+
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Number:</th>
+                  <td>
+                    <input
+                      type="tel"
+                      placeholder="Enter Phone Number"
+                      name="number"
+                      formControlName="phone_no"
+                      required=""
+                      autocomplete="off"
+                      class="input_n"
+
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Number of players</th>
+                  <td>
+                    <input
+                      type="number"
+                      placeholder="Enter number of players"
+                      (keyup)="players()"
+                      name="numberOfPlayers"
+                      formControlName="number_of_player"
+                      required=""
+                      autocomplete="off"
+                      class="input_n"
+
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Discount:</th>
+                  <td>
+                    <input
+                      type="number"
+                      (keyup)="discount()"
+                      placeholder="Enter Discount %"
+                      name=""
+                      formControlName="discount"
+                      class="input_n"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Subtotal:</th>
+                  <td>{{this.bookingForm.value.subTotal??0}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Discount Price:</th>
+                  <td>{{this.bookingForm.value.subTotal - this.bookingForm.value.price}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Total:</th>
+                  <td>{{this.bookingForm.value.price??0}}</td>
+                </tr>
+              </tbody>
+            </table>
+        <div class="btnn">
+          <button type="submit" class="pdf theme_btnn float-end">
+            Confirm Booking
+          </button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="sectionToPrint" style="display: none;">
+  <div class="invoice">
+    <div class="img">
+      <img src="../../../assets/img/logo.png" alt="Restaurant Logo" style="width: 80%;margin:auto;margin-top: 20px;">
+    </div>
+    <div class="invoice-header">
+      <div class="date">
+        <p>Order ID: </p>
+        <b>#122</b>
+      </div>
+      <div class="date">
+        <p>Date: </p>
+
+      </div>
+      <div class="date">
+        <p>Type: </p>
+        <b>Marksman</b>
+      </div>
+      <!-- <div class="date">
+        <p>Time: </p>
+        <span>1:32 PM</span>
+      </div> -->
+    </div>
+    <table class="invoice-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th style="padding-left: 0px;">Qty</th>
+          <th class="th">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+    <div class="invoice-total">
+      <p style="position: relative;left: 2px;">Total:</p>
+
+    </div>
+    <div class="invoice-total">
+      <p>Return:</p>
+      <p>Rs</p>
+    </div>
+    <div class="text-center my-5">
+      <span>Powered By Technologenesis LTD </span>
+    </div>
+  </div>
+  </div>
+<app-footer></app-footer>

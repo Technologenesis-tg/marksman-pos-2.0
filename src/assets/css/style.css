@@ -1,0 +1,625 @@
+:root {
+  --main: #bd0f0f;
+  --card: #272c33;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+h3{
+  font-family: 'Poppins';
+  color: white;
+}
+p{
+  color: white;
+  font-family: 'Poppins';
+}
+span{
+  color: white;
+  font-family: 'Poppins';
+  
+}
+.form-error p{
+  color: red;
+}
+@font-face {
+  font-family: 'legend';
+  src: url('../fonts/Legend.ttf');
+}
+@font-face {
+  font-family: 'Poppins-bold';
+  src: url('../fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+a{
+  text-decoration: none;
+}
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  .body{
+    background-color: #383f48;
+    height: 100vh;
+  }
+  .page-titles {
+    padding-bottom: 20px;
+}
+
+.page-titles {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 30px 15px;
+}
+.page-titles h3 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.text-themecolor {
+  color: var(--main) !important;
+}
+.page-titles .breadcrumb {
+  float: right;
+}
+
+.page-titles .breadcrumb {
+  padding: 0px;
+  background: transparent;
+  font-size: 14px;
+}
+.breadcrumb {
+  margin-bottom: 0px;
+}
+.page-titles .breadcrumb li {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+ol li {
+  margin: 5px 0;
+}
+.page-titles .breadcrumb .breadcrumb-item.active {
+  color: #99abb4;
+}
+.page-titles .breadcrumb .breadcrumb-item+.breadcrumb-item:before {
+  content: "\2f";
+  font-family: Font Awesome Free;
+  color: #a6b7bf;
+  font-size: 11px;
+}
+.errorrs {
+  color: red;
+}
+/* datepicker */
+.datepickr{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+ngb-datepicker.booking {
+  width: 100%;
+  background-color: var(--card);
+  border: 1px solid var(--main) !important;
+}
+
+.booking .ngb-dp-month {
+  width: 100%;
+}
+
+.booking .ngb-dp-week {
+  justify-content: space-around !important;
+}
+
+.btn-light.bg-primary.text-white {
+  background-color: var(--main) !important;
+}
+
+[ngbDatepickerDayView]:hover:not(.bg-primary),
+[ngbDatepickerDayView].active:not(.bg-primary) {
+  color: white !important;
+  cursor: pointer !important;
+  background-color: var(--main) !important;
+  outline: none !important;
+}
+
+.booking .ngb-dp-day {
+  padding: 28px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.booking .ngb-dp-header {
+  background-color: transparent !important;
+  border: none !important;
+  padding-top: 20px !important;
+}
+
+.booking .ngb-dp-weekdays {
+  background-color: var(--main) !important;
+  border: none !important;
+  padding: 12px;
+  margin-top: 11px !important;
+}
+
+.booking .ngb-dp-weekday {
+  color: #fff !important;
+}
+
+.booking ngb-datepicker-navigation-select>.form-select {
+  border-radius: 5px !important;
+  margin: 0px 10px;
+  background-color: var(--card) !important;
+  height: 45px !important;
+  color: white;
+  border: 1px solid var(--main) !important;
+  text-align: center;
+  font-size: 20px !important;
+}
+
+.booking .ngb-dp-weekday.small {
+  position: relative;
+}
+
+.booking .ngb-dp-weekday.small::before {
+  background: var(--main);
+  position: absolute;
+  width: 84px;
+  left: -18px;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.booking .ngb-dp-weekday.small:nth-child(1):before {
+  content: "Monday";
+}
+
+.booking .ngb-dp-weekday.small:nth-child(2):before {
+  content: "Tuesday";
+}
+
+.booking .ngb-dp-weekday.small:nth-child(3):before {
+  content: "Wednesday";
+}
+
+.booking .ngb-dp-weekday.small:nth-child(4):before {
+  content: "Thursday";
+}
+
+.booking .ngb-dp-weekday.small:nth-child(5):before {
+  content: "Friday";
+}
+
+.booking .ngb-dp-weekday.small:nth-child(6):before {
+  content: "Saturday";
+}
+
+.booking .ngb-dp-weekday.small:nth-child(7):before {
+  content: "Sunday";
+}
+
+.ngb-dp-arrow {
+  display: flex;
+  flex: 0 !important;
+}
+
+.ngb-dp-arrow-btn {
+  color: white;
+}
+[ngbDatepickerDayView].outside {
+  opacity: 0.3 !important;
+}
+.booking .ngb-dp-day {
+  padding: 35px 0px !important;
+}
+
+/* edit-modal */
+.edit-modal .modal-content {
+  margin-top: -7rem;
+  border-radius: 21px;
+}
+.img-modal .modal-content{
+  margin-top: -7rem;
+  height: 425px;
+  border-radius: 20px;
+}
+.user-modal .modal-content{
+  margin-top: -7rem;
+  border-radius: 21px;
+}
+.col-md-9.dashboard-3 {
+  border-left: 2px solid var(--main);
+  border-right: 2px solid var(--main);
+}
+.member {
+  width: 100%;
+  height: 50px;
+  background-color: var(--card);
+  outline: none;
+  border: 1px solid var(--main);
+  color: white;
+  padding: 0 20px;
+  margin: 0px 0px 10px 0px;
+  border-left: 6px solid var(--main);
+  border-right: 6px solid var(--main);
+  border-radius: 8px;
+}
+.member::placeholder{
+  color: rgba(255, 255, 255, 0.67);
+}
+
+
+.theme_heading h2 {
+  text-transform: uppercase;
+  font-size: 65px;
+  position: relative;
+  color: white;
+  display: inline-block;
+  font-family: 'legend';
+  margin-top: 40px;
+}
+
+.theme_heading h2:before {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 5px;
+  background: var(--main);
+  bottom: -10px;
+  left: 0;
+  border-radius: 5px;
+}
+
+.theme_heading.text-center h2:before {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.theme_btnn {
+  padding: 0.8em 1.7em;
+  display: inline-block;
+  background-color: transparent;
+  border-radius: 0.3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--main);
+  z-index: 1;
+}
+
+.theme_btnn {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.theme_btnn:hover {
+  color: white;
+}
+
+.theme_btnn:before,
+.theme_btnn:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--main);
+  transition: 1s ease;
+}
+
+.theme_btnn:before {
+  top: -1em;
+  left: -2em;
+}
+
+.theme_btnn:after {
+  left: calc(100% + 1em);
+  top: calc(100% + 2em);
+}
+.theme_btnn:hover {
+  transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+}
+
+.theme_btnn:hover:before,
+.theme_btnn:hover:after {
+  height: 410px;
+  width: 410px;
+}
+.modal-div .modal-dialog {
+  max-width: 1000px;
+}
+.modalss{
+  color: white !important;
+}
+.modal-h2{
+      font-size: 60px;
+    color: #fff;
+    font-weight: 500;
+    margin: 0 0 30px;
+}
+.main-div {
+  border: 2px solid var(--main);
+  padding: 30px;
+  height: auto;
+  margin: 0;
+  background-color: var(--card);
+  border-radius: 6px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+}
+.boxx {
+  width: 90%;
+}
+.span {
+  display: inline-block;
+  width: 200px;
+}
+.das {
+  display: flex;
+}
+
+.das h3 {
+  width: 90%;
+  color: white;
+}
+
+.tabless {
+  color: white !important;
+}
+.tabless th{
+  font-size: 17px;
+  width: 50%;
+}
+[ngbDatepickerDayView] {
+  color: white !important;
+}
+.select-time {
+  background: var(--card);
+  padding: 45px;
+  border-radius: 6px;
+  border: 2px solid var(--main);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+}
+.input_n{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 100%;
+  color: white;
+}
+.loader {
+  animation: rotate 1s infinite;
+  height: 50px;
+  width: 50px;
+}
+
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+.loader:before {
+  animation: ball1 1s infinite;
+  background-color: #fff;
+  box-shadow: 30px 0 0 #bd0f0f;
+  margin-bottom: 10px;
+}
+.loader:after {
+  animation: ball2 1s infinite;
+  background-color: #bd0f0f;
+  box-shadow: 30px 0 0 #fff;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg) scale(0.8) }
+  50% { transform: rotate(360deg) scale(1.2) }
+  100% { transform: rotate(720deg) scale(0.8) }
+}
+
+@keyframes ball1 {
+  0% {
+    box-shadow: 30px 0 0 #bd0f0f;
+  }
+  50% {
+    box-shadow: 0 0 0 #bd0f0f;
+    margin-bottom: 0;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #bd0f0f;
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes ball2 {
+  0% {
+    box-shadow: 30px 0 0 #fff;
+  }
+  50% {
+    box-shadow: 0 0 0 #fff;
+    margin-top: -20px;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #fff;
+    margin-top: 0;
+  }
+}
+
+.main-loading{
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (min-width: 1366px) and (max-width: 1920px) {
+  .cardz {
+    width: 220px !important;
+    height: 200px !important;
+    margin: 80px 50px !important;
+    top: 6rem;
+}
+.title{
+  font-size: 23px !important;
+}
+
+.input_n {
+  padding: 0px !important;
+}
+.col-md-3 .report_box h3 {
+  font-size: 20px;
+}
+.side-div {
+  height: 333px !important;
+}
+}
+
+ @media only screen and (min-width: 1200px) and (max-width: 1365px) {}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+h3.d-flex.justify-content-between.align-content-center {
+  font-size: 17px !important;
+}
+.table>:not(caption)>*>* {
+  padding: 3px !important;
+}
+.tabless th, td {
+  font-size: 14px !important;
+}
+.input_n {
+  padding: 0px !important;
+}
+.input_n::placeholder {
+  font-size: 12px !important;
+}
+.cardz {
+  width: 190px !important;
+  height: 180px !important;
+  padding: 0px !important;
+  margin: 80px 0 !important;
+  top: 5rem !important;
+}
+.title{
+  font-size: 21px !important;
+}
+.report_box {
+  padding: 12px !important;
+}
+.col-md-3 .report_box h3 {
+  font-size: 15px !important;
+}
+.report_box h5 {
+  gap: 9px !important;
+  font-size: 15px !important;
+}
+.side-div {
+  height: 270px !important;
+}
+.drop {
+  width: 5% !important;
+}
+.gel-slots input + span {
+  font-size: 15px !important;
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  ul.slots{
+    gap: 8px !important;
+    margin: 8px !important;
+}
+  .nav-links ul{
+    gap: 60px !important;
+    font-size: 13px !important;
+}
+.theme_heading h2 {
+  font-size: 43px !important;
+}
+.badminton-slots span {
+  font-size: 19px !important;
+}
+.slot_time {
+  padding: 35px !important;
+}
+.badminton-slots span {
+  font-size: 18px !important;
+}
+h3.d-flex.justify-content-between.align-content-center {
+  font-size: 16px !important;
+  margin-bottom: 20px;
+}
+.cardz {
+  width: 160px !important;
+  height: 180px !important;
+  padding: 0px !important;
+  margin: 80px 0 !important;
+  top: 5rem !important;
+}
+.title{
+  font-size: 21px !important;
+}
+.player_data ul li{
+font-size: 15px !important;
+}
+.tbodyy tr, td, th{
+  padding: 0 !important;
+}
+.tabless th, td {
+  font-size: 15px !important;
+}
+.drop {
+  width: 5% !important;
+}
+.inputx input {
+  height: 35px !important;
+  margin: 5px 0 !important;
+  border-radius: 5px !important;
+}
+.borderdd-box {
+  margin: 20px 0 !important;
+  padding: 10px !important;
+}
+.gel li {
+  line-height: 20px !important;
+  font-size: 14px !important;
+}
+.time_slotz{
+  padding: 20px !important;
+}
+.bad-slotz {
+  font-size: 12px !important;
+  font-weight: 600;
+}
+}
+
+@media only screen and (min-width: 520px) and (max-width: 767px) {}
+
+@media only screen and (min-width: 300px) and (max-width: 519px) {}
+
+@media only screen and (min-width: 280px) and (max-width: 299px) {}

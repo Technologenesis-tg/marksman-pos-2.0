@@ -1,0 +1,50 @@
+.bg-colors{
+    background-color: var(--card);
+    border: 3px solid var(--main);
+    border-radius: 6px;
+    padding: 20px;
+    margin: 60px 0;
+}
+label {
+    margin-bottom: 4px;
+    color: white;
+}
+input, select, input:focus {
+    height: 50px;
+    width: 100%;
+    border: 1px solid #fff;
+    margin-bottom: 30px;
+    background: transparent;
+    color: #fff;
+    border-left: 5px solid var(--main);
+    border-right: 5px solid var(--main);
+    appearance: none;
+    box-shadow: none;
+}
+.addons{
+    gap: 10px;
+    padding-bottom: 30px;
+}
+.addons input {
+    border-radius: 5px;
+    margin: 0;
+}
+
+.addons button {
+    background-color: #850000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-bottom: 1px solid #fff;
+    color: white;
+    font-size: 20px;
+}

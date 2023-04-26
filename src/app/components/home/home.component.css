@@ -1,0 +1,43 @@
+.report_box {
+  padding: 20px;
+  border-radius: 6px;
+  background: var(--card);
+  border: 1px solid #ffffff47;
+  margin-bottom: 10px;
+  color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.text{
+  color: var(--main);
+}
+
+.report_box h2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28px;
+  margin: 0;
+}
+.report_box h5 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.col-md-3 .report_box h3{
+  color: var(--main);
+  text-align: center;
+}
+.side-div{
+  background-color: var(--card);
+  height: 350px;
+  border-radius: 6px;
+}
+@media (min-width: 1400px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      max-width: 1610px;
+  }
+}
+.report_box h1{
+  text-align: center;
+}

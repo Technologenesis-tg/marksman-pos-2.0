@@ -1,0 +1,336 @@
+<app-header></app-header>
+<div class="container">
+  <div class="theme_heading text-center">
+    <h2>Paintball</h2>
+  </div>
+  <section class="position-relative mt-2" *ngIf="isDateSelected">
+      <div class="row">
+        <!-- <div class="col-md-12">
+          <div class="datee">
+            <h3 class="h4">Please Select Date</h3>
+            <p>{{minDate.day}} - {{ms[minDate.month]}} - {{minDate.year}}</p>
+          </div>
+        </div> -->
+        <form #myForm="ngForm" class="p-0">
+          <input
+            type="number"
+            name="inputValues"
+            id=""
+            class="member"
+            placeholder="Number of Players"
+            required
+            [(ngModel)]="inputNumber"
+          />
+          <p class="errorrs" *ngIf="member_error2">
+            Please Select Number Of Players !
+          </p>
+        </form>
+        <ngb-datepicker
+          [minDate]="{year: 2023, month: 2, day: 25}"
+          class="booking"
+          [(ngModel)]="selectedDate"
+          (dateSelect)="onDateSelect($event, myForm)"
+        ></ngb-datepicker>
+      </div>
+  </section>
+  <section *ngIf="slots_time">
+      <div class="row">
+        <div class="col-md-12 mda">
+          <div class="select-time">
+            <span>Select Time Slot</span>
+            <div class="time-box-wrp">
+              <div *ngFor="let time of timeSlots" class="time-btn active">
+                <div (click)="open(content)">
+                  <input
+                    type="radio"
+                    name="time"
+                    [value]="time"
+                    [(ngModel)]="selectedTime"
+                  /><span>{{ time }}</span>
+                </div>
+                <p>Available : {{ availability[time] }}</p>
+              </div>
+            </div>
+            <button
+              id="prev_btn"
+              class="theme_btnn mt-3"
+              (click)="onPreviousClick()"
+            >
+              <i class="fa-regular fa-arrow-left-long"></i>
+              Back
+            </button>
+          </div>
+        </div>
+      </div>
+  </section>
+  <section *ngIf="detail">
+      <div class="row main-div mt-3">
+        <div class="col-lg-7 col-md-12" style="padding: 0 !important;">
+          <form>
+            <div class="row">
+              <div class="col-md-6">
+                <h4>Player</h4>
+
+                <div class="inputx">
+                    <input type="tel" placeholder="Number" />
+                </div>
+                <div class="inputx">
+                    <input type="text" placeholder="Name" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <h4>Player</h4>
+
+                <div class="inputx">
+                    <input type="tel" placeholder="Number" />
+                </div>
+                <div class="inputx">
+                    <input type="text" placeholder="Name" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <h4>Player</h4>
+
+                <div class="inputx">
+                    <input type="tel" placeholder="Number" />
+                </div>
+                <div class="inputx">
+                    <input type="text" placeholder="Name" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <h4>Player</h4>
+
+                <div class="inputx">
+                    <input type="tel" placeholder="Number" />
+                </div>
+                <div class="inputx">
+                    <input type="text" placeholder="Name" />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-5 col-md-12">
+          <form class="">
+            <div class="box2 text-dark">
+              <div class="das">
+                <h3>Booking Details</h3>
+              </div>
+              <table class="table tabless text-light">
+                <thead></thead>
+                <tbody class="tbodyy">
+                  <tr>
+                    <th scope="row">Name:</th>
+                    <td>
+                      <input
+                        type="text"
+                        placeholder="Enter Name"
+                        name="name"
+                        formcontrolname="name"
+                        required=""
+                        autocomplete="off"
+                        class="input_n"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Number:</th>
+                    <td>
+                      <input
+                        type="tel"
+                        placeholder="Enter Phone Number"
+                        name="number"
+                        formcontrolname="number"
+                        required=""
+                        autocomplete="off"
+                        class="input_n"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Email:</th>
+                    <td>
+                      <input
+                        type="email"
+                        placeholder="Enter Email"
+                        name="email"
+                        formcontrolname="email"
+                        required=""
+                        autocomplete="off"
+                        class="input_n"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Slot:</th>
+                    <td>12:00 PM</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Exclusive:</th>
+                    <td>
+                      <input
+                        type="checkbox"
+                        name="exclusive"
+                        formcontrolname="exclusive"
+                        class="form-check-input"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">No Of Players:</th>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Booking Date:</th>
+                    <td>4-4-2023</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Package</th>
+                    <td>
+                      <select formcontrolname="addonPackage" class="form-select">
+                        <option value="Basic 35 Shots" selected="">
+                          Basic 35 Shots
+                        </option>
+                        <option value="Standerd  70 shots">
+                          Standerd 70 shots
+                        </option>
+                        <option value="Premium">
+                          Premium
+                        </option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Extra Shots:</th>
+                    <td>
+                      <div class="d-flex align-items-center addons">
+                        <button type="button">-</button
+                        ><input
+                          readonly=""
+                          type="number"
+                          formcontrolname="extraShots"
+                          minlength="0"
+                        /><button type="button">+</button>
+                      </div>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <th scope="row">Discount:</th>
+                    <td>
+                      <input
+                        type="text"
+                        placeholder="Enter Discount %"
+                        name=""
+                        formcontrolname="discount"
+                        class="input_n dis_input"
+                        ng-reflect-name="discount"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Discount Price:</th>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Total:</th>
+                    <td>1999</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="btnn">
+              <button class="pdf theme_btnn float-end">
+                Confirm Booking
+              </button>
+            </div>
+          </form>
+          <div class="btnnz">
+              <button class="pdf theme_btnn float-start" (click)="back_slot()">
+                  Back
+                </button>
+      </div>
+        </div>
+    
+      </div>
+  </section>
+</div>
+<!-- modal  -->
+<ng-template #content let-modal>
+  <div class="modal-body modalss">
+    <div class="modal-content">
+      <div class="text-center">
+        <span class="close-btn"
+          ><i class="fa fa-close" (click)="modal.close('Save click')"></i
+        ></span>
+        <h2 class="modal-h2">Select Slots</h2>
+        <h3 class="d-flex justify-content-between ptext">
+          <span id="slot-date">
+            Date: {{datee}}
+            <p>Number Of Players : {{inputNumber}}</p></span
+          ><span id="slot-time">
+            Time: {{selectedTime}}
+            <p>Selected Players : {{addedPlayers}}</p></span
+          >
+        </h3>
+      </div>
+      <h4 class="text-center">Team 1</h4>
+      <ul class="slots">
+        <li
+          *ngFor="let slot of slots.slice(0, 8)"
+          [class.activez]="slot.checked"
+        >
+          <input
+            type="checkbox"
+            class="checkboxx"
+            [id]="slot.id"
+            [value]="slot.value"
+            [(ngModel)]="slot.checked"
+            (change)="onSlotChange()"
+          />
+          <span class="slots">Available</span>
+          <span class="edit_icon"><i class="material-icons">edit</i></span>
+        </li>
+      </ul>
+      <div class="text-center">
+        <h2>VS</h2>
+        <h4>Team 2</h4>
+      </div>
+      <ul class="slots">
+        <li
+          *ngFor="let slot of slots.slice(9, 16)"
+          [class.activez]="slot.checked"
+        >
+          <input
+            type="checkbox"
+            class="checkboxx"
+            [id]="slot.id"
+            [value]="slot.value"
+            [(ngModel)]="slot.checked"
+            (change)="onSlotChange()"
+          />
+          <span class="slots">Available</span>
+          <span class="edit_icon"><i class="material-icons">edit</i></span>
+        </li>
+      </ul>
+      <div class="text-center"></div>
+      <ul
+        class="d-flex justify-content-center"
+        style="gap: 10px; list-style: none;"
+      >
+        <li>
+          <button
+            aria-label="Close"
+            class="theme_btnn"
+            (click)="goToNextPage('proceed-booking', content)"
+          >
+            Proceed
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</ng-template>
+<!-- modal end -->
+<app-footer></app-footer>

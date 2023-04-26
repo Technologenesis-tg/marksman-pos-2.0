@@ -1,0 +1,67 @@
+.time_slotz {
+    background: var(--card);
+    border-radius: 6px;
+    border: 3px solid var(--main);
+    padding: 50px;
+}
+.member {
+    font-size: 19px;
+    padding: 0 10px !important;
+}
+.badminton-slots {
+    position: relative;
+}
+.badminton-slots input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+.gel-slots input + span {
+    font-size: 18px;
+    color: #000;
+}
+
+.badminton-slots span {
+    color: #000;
+    font-size: 20px;
+    height: 65px;
+    width: 100%;
+    background: #4aff3e;
+    padding: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.badminton-slots input:checked + span {
+    background: #808080;
+    color: #fff;
+}
+.booking_final {
+    border: 3px solid var(--main);
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--card);
+}
+h3 span:nth-child(1) {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: white;
+}
+ul , li{
+    color: white;
+    list-style: none;
+    padding: 0;
+}
+.player_data li{
+    line-height: 35px;
+}
+.am{
+    padding: 0;
+}
+.col-md-3.mb-3 {
+    padding: 4px;
+}

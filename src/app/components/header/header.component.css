@@ -1,0 +1,42 @@
+.container-fluid{
+  margin: auto;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+.toolbar{
+  background-color: var(--main);
+  height: 60px;
+}
+.header{
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+.drop {
+  position: absolute;
+  right: 100px;
+  width: 3%;
+}
+.drop img {
+  width: 100%;
+}
+.navbar{
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  height: 50px;
+  padding: 0;
+  margin: auto;
+  justify-content: center;
+}
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 80px;
+  margin: auto;
+}
+.nav-links ul li a{
+  color: white;
+  font-weight: 400;
+}

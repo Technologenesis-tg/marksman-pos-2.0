@@ -1,0 +1,316 @@
+<app-header></app-header>
+<div class="container">
+    <div class="theme_heading text-center">
+      <h2>Futsal</h2>
+    </div>
+    <section class="position-relative mt-5" *ngIf="isDateSelected">
+      <div class="container">
+        <div class="row">
+          <!-- <div class="col-md-12">
+            <div class="datee">
+              <h3 class="h4">Please Select Date</h3>
+              <p>{{minDate.day}} - {{ms[minDate.month]}} - {{minDate.year}}</p>
+            </div>
+          </div> -->
+          <form #myForm="ngForm" class="p-0">
+            <input
+              type="number"
+              name="inputValues"
+              id=""
+              class="member"
+              placeholder="Number of Players"
+              required
+              [(ngModel)]="inputNumber"
+            />
+            <p class="errorrs" *ngIf="member_error2">
+              Please Select Number Of Players !
+            </p>
+          </form>
+          <ngb-datepicker
+            [minDate]="{year: 2023, month: 2, day: 25}"
+            class="booking"
+            [(ngModel)]="selectedDate"
+            (dateSelect)="onDateSelect($event, myForm)"
+          ></ngb-datepicker>
+        </div>
+      </div>
+    </section>
+    <section class="secc mt-5" *ngIf="slots_time">
+          <div class="slot_time">
+            <div class="row">
+                <div class="col-md-12">
+                  <h3 class="d-flex justify-content-between align-content-center">
+                    Select Your Time
+                    <span> You can select multiple slots </span><span class="date">4/4/2023</span>
+                  </h3>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div>
+          
+                        <div class="row">
+                          <div class="col-md-3 mb-3">
+                            <div class="gel-slots">
+                              <div class="badminton-slots">
+                                <input type="checkbox" name="time" /><span>12:00 AM</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3 mb-3">
+                            <div class="gel-slots">
+                              <div class="badminton-slots">
+                                <input type="checkbox" name="time"
+                                  ng-reflect-model="false" /><span>1:00 AM</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3 mb-3">
+                            <div class="gel-slots">
+                              <div class="badminton-slots">
+                                <input type="checkbox" name="time" /><span>2:00 AM</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3 mb-3">
+                            <div class="gel-slots">
+                              <div class="badminton-slots">
+                                <input type="checkbox" name="time" /><span>3:00 AM</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3 mb-3">
+                            <div class="gel-slots">
+                              <div class="badminton-slots">
+                                <input type="checkbox" name="time" /><span>9:00 PM</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3 mb-3">
+                            <div class="gel-slots">
+                              <div class="badminton-slots">
+                                <input type="checkbox" name="time" /><span>10:00 PM</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3 mb-3">
+                            <div class="gel-slots">
+                              <div class="badminton-slots">
+                                <input type="checkbox" name="time" /><span>11:00 PM</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3 mb-3">
+                            <div class="gel-slots">
+                              <div class="badminton-slots">
+                                <input type="checkbox" name="time" /><span>12:00 PM</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-error my-1">
+                        <p>Please Select Your Slot</p>
+                      </div>
+          
+                      <div class="buttons_row d-flex justify-content-between">
+                        <button class="theme_btnn" (click)="backHome()">
+                          <i class="fa-regular fa-arrow-left-long"></i>
+                          Back</button>
+                          <button class="theme_btnn" (click)="next()">
+                          Next
+                          <i class="fa-regular fa-arrow-right-long"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+    </section>
+    <section *ngIf="detail">
+          <div class="row mt-4">
+            <div class="col-md-12 booking_final">
+                <h3 class="text-center d-flex justify-content-between">Futsal</h3>
+                <div class="row borderr">
+                  <div class="col-md-8 player_data">
+                    <h3>Rules and Regulations</h3>
+                    <ul>
+                      <li>All players MUST report 5 minutes before the slot time.</li>
+                      <li>
+                        All players MUST submit the equipment back before leaving the court.
+                      </li>
+                      <li>
+                        All Players MUST use the equipment carefully, any misuse or damage to
+                        the equipment will be player's responsibility.
+                        <br /><b
+                          class="ng-tns-c69-0"
+                          style="color: red;"
+                          >PLEASE NOTE THAT YOU WILL BE CHARGED FOR ANY DAMAGES TO THE
+                          EQUIPMENT</b
+                        >
+                      </li>
+                      <li>
+                        Decision of the referee / Umpire will be final. No arguments will be
+                        entertained.
+                      </li>
+                      <li>
+                        The Facilitation staff is there for your assistance, please cooperate
+                        with them.
+                      </li>
+                      <li>
+                        Failure to compliance will result in disqualification from the game or
+                        upto the extent of removal of the player from the premises.
+                      </li>
+                    </ul>
+                    <h3>Charges</h3>
+                    <ul>
+                      <li>
+                        <b>Rs 3999 Per Hour.</b>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-4">
+                    <h3>Booking Details</h3>
+                    <form>
+                        <table class="table tabless text-light">
+                            <thead></thead>
+                            <tbody class="tbodyy">
+                              <tr>
+                                <th scope="row">Name:</th>
+                                <td>
+                                  <input
+                                    type="text"
+                                    placeholder="Enter Name"
+                                    name="name"
+                                    formcontrolname="name"
+                                    required=""
+                                    autocomplete="off"
+                                    class="input_n"
+                                    ng-reflect-required=""
+                                    ng-reflect-name="name"
+                                  />
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Number:</th>
+                                <td>
+                                  <input
+                                    type="tel"
+                                    placeholder="Enter Phone Number"
+                                    name="number"
+                                    formcontrolname="number"
+                                    required=""
+                                    autocomplete="off"
+                                    class="input_n"
+                                    ng-reflect-required=""
+                                    ng-reflect-name="number"
+                                  />
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Email:</th>
+                                <td>
+                                  <input
+                                    type="email"
+                                    placeholder="Enter Email"
+                                    name="email"
+                                    formcontrolname="email"
+                                    required=""
+                                    autocomplete="off"
+                                    class="input_n"
+                                    ng-reflect-required=""
+                                    ng-reflect-name="email"
+                                  />
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Number Of Player:</th>
+                                <td>4</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Date:</th>
+                                <td>
+                                  4/4/2023
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">You Have Booked:</th>
+                                <td>1 slots</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Time:</th>
+                                <td>12:00 AM</td>
+                              </tr>                
+                              
+                              <tr>
+                                <th scope="row">Discount:</th>
+                                <td>
+                                  <input
+                                    type="text"
+                                    placeholder="Enter Discount %"
+                                    name=""
+                                    formcontrolname="discount"
+                                    class="input_n dis_input"
+                                    ng-reflect-name="discount"
+                                  />
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Subtotal:</th>
+                                <td>3999</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Discount Price:</th>
+                                <td>0</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Total:</th>
+                                <td>1999</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                      <div class="btnn">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <select
+                              aria-label="Default select example"
+                              formcontrolname="payment_status"
+                              class="form-select mb-3"
+                            >
+                              <option disabled="">
+                                Payment Staus
+                              </option>
+                              <option value="Paid">Paid</option>
+                              <option value="Unpaid">Unpaid</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6">
+                            <select
+                              aria-label="Default select example"
+                              formcontrolname="bookingsStatus"
+                              name="status"
+                              class="form-select mb-3"
+                            >
+                              <option disabled>Booking Status</option>
+                              <option value="Booked">Booked</option>
+                              <option value="Hold">Hold</option>
+                              <option value="Cancel">Cancel</option>
+                            </select>
+                          </div>
+                        </div>
+                        <button type="submit" class="pdf theme_btnn float-end">
+                          Confirm Booking
+                        </button>
+                      </div>
+                    </form>
+                            <div class="btnx">
+                              <button class="theme_btnn" (click)="backs()">BACK</button>
+                            </div>
+                        </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+</div>
+<app-footer></app-footer>

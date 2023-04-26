@@ -1,0 +1,102 @@
+.borderdd-box {
+    background-color: var(--card);
+    border: 3px solid var(--main);
+    border-radius: 6px;
+    padding: 20px;
+    margin: 60px 0;
+    color: white;
+    margin-top: 10px;
+}
+.col-md-8 > ul {
+    list-style: circle;
+    padding-left: 10px;
+}
+.col-md-8 h2 {
+    font-size: 28px;
+}
+li {
+    line-height: 27px;
+    font-size: 15px;
+}
+tr, th {
+    font-size: 14px !important;
+}
+.col-md-4{
+    padding: 0;
+}
+.input_n{
+font-size: 14px;
+}
+/* --Bill-- */
+.invoice {
+  margin: 10px auto;
+  max-width: 800px;
+  padding: 5px;
+}
+.invoice-header {
+  margin-bottom: 10px;
+}
+.invoice-header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+.invoice-header p {
+  margin: 0;
+}
+.invoice-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.invoice-table th, .invoice-table td {
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+  text-align: left;
+}
+.invoice-table th {
+  background-color: #f2f2f2;
+}
+.invoice-total {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -25px;
+}
+.invoice-total p {
+  font-weight: bold;
+  margin-left: 10px;
+}
+.date{
+  display: flex;
+  justify-content: space-between;
+}
+.text-center{
+  text-align: center;
+}
+.my-5{
+  margin-top: 2.5rem;
+}
+.qty{
+  margin: auto;
+}
+tr td:first-child{
+  width: 40rem;
+}
+.text-center span{
+  color: #ccc;
+  font-size: 10px !important;
+}
+.img img{
+  width: 80%;
+}
+.img{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.th{
+  text-align: center !important;
+}
+.invoice-total p{
+padding-right: 3px;
+}
+/* --Bill End -- */
